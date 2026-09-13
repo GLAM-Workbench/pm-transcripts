@@ -1,0 +1,39 @@
+{
+  "language": "eng",
+  "license": "MIT",
+  "title": "PM Transcripts",
+  "related_identifiers": [
+    {
+      "scheme": "url",
+      "identifier": "https://github.com/glam-workbench/pm-transcripts/tree/v1.0.0",
+      "relation": "isDerivedFrom",
+      "resource_type": "software"
+    },
+    {
+      "scheme": "url",
+      "identifier": "https://glam-workbench.net/pm-transcripts/",
+      "relation": "isDocumentedBy",
+      "resource_type": "publication-softwaredocumentation"
+    },
+    {
+      "scheme": "url",
+      "identifier": "https://glam-workbench.net/",
+      "relation": "isPartOf",
+      "resource_type": "other"
+    }
+  ],
+  "version": "v1.0.0",
+  "upload_type": "software",
+  "keywords": [
+    "digital humanities",
+    "Jupyter",
+    "GLAM Workbench"
+  ],
+  "publication_date": "2026-09-13",
+  "creators": {
+    "name": "Sherratt, Tim",
+    "orcid": "http://orcid.org/0000-0001-7956-4498"
+  },
+  "access_right": "open",
+  "description": "<p>The Department of Prime Minister and Cabinet provides transcripts of more than 20,000 speeches, media releases, and interviews by Australian Prime Ministers. These transcripts can be searched online, and the underlying XML files can be downloaded using a simple API. This repository includes Jupyter notebooks for harvesting, indexing, analysing, and aggregating the transcripts.</p> <p>For more information and documentation see the <a href=\"https://glam-workbench.net/pm-transcripts/\">PM Transcripts - GLAM Workbench</a> section of the <a href=\"https://glam-workbench.net\">GLAM Workbench</a>.</p> <h2 id=\"notebooks\">Notebooks</h2> <ul> <li>Aggregate transcripts by PM</li> <li>Harvest transcripts</li> <li>Create an index to the harvested files</li> </ul> <h2 id=\"associated-datasets\">Associated datasets</h2> <ul> <li><a href=\"https://github.com/wragge/pm-transcripts-data\">GitHub - wragge/pm-transcripts-data · GitHub</a></li> </ul> <hr /> <p>Created by <a href=\"https://timsherratt.au\">Tim Sherratt</a> for the <a href=\"https://glam-workbench.net\">GLAM Workbench</a></p>"
+}

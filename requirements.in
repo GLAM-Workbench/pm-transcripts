@@ -1,0 +1,10 @@
+jupyterlab
+beautifulsoup4
+lxml
+requests
+requests-cache
+pandas
+altair
+arrow
+tqdm
+ipywidgets

@@ -1,16 +1,22 @@
-# PMs Transcripts
+# pm-transcripts
 
-The Department of Prime Minister and Cabinet provides transcripts of more than [20,000 speeches, media releases, and interviews](https://pmtranscripts.dpmc.gov.au/about-collection) by Australian Prime Ministers. These transcripts can be [searched online](https://pmtranscripts.dpmc.gov.au/), and the underlying XML files [can be downloaded](https://pmtranscripts.dpmc.gov.au/developers) using a simple API.
+The Department of Prime Minister and Cabinet provides transcripts of more than 20,000 speeches, media releases, and interviews by Australian Prime Ministers. These transcripts can be searched online, and the underlying XML files can be downloaded using a simple API. This repository includes Jupyter notebooks for harvesting, indexing, analysing, and aggregating the transcripts.
 
-I've created [a repository](https://github.com/wragge/pm-transcripts) containing all the XML files, a CSV-formatted index, and aggregated text and zip files for each prime minister.
+For more information and documentation see the [PM Transcripts - GLAM Workbench](https://glam-workbench.net/pm-transcripts/) section of the [GLAM Workbench](https://glam-workbench.net).
 
-This repository includes Jupyter notebooks for harvesting, indexing, analysing, and aggregating all the transcripts.
+## Notebooks
+- [Aggregate transcripts by PM](https://github.com/GLAM-Workbench/pm-transcripts/blob/master/aggregate_transcripts.ipynb)
+- [Harvest transcripts](https://github.com/GLAM-Workbench/pm-transcripts/blob/master/harvest_transcripts.ipynb)
+- [Create an index to the harvested files](https://github.com/GLAM-Workbench/pm-transcripts/blob/master/index_and_analyse_transcript_metadata.ipynb)
 
-Run the notebooks in this repository live on MyBinder — just click the button (it might take a little while to load).
 
-[![Binder](https://mybinder.org/badge.svg)](https://mybinder.org/v2/gh/GLAM-Workbench/pm-transcripts/master)
+## Associated datasets
+- [GitHub - wragge/pm-transcripts-data · GitHub](https://github.com/wragge/pm-transcripts-data)
+
+
+<!-- START RUN INFO -->
+
+<!-- END RUN INFO -->
 
 ----
-
-See the [GLAM Workbench documentation](https://glam-workbench.github.io/) for more details.  
-If you think this project is worthwhile, you might like [to support me on Patreon](https://www.patreon.com/timsherratt).
+Created by [Tim Sherratt](https://timsherratt.au) for the [GLAM Workbench](https://glam-workbench.net)
