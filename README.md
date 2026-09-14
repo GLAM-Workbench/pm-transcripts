@@ -1,8 +1,8 @@
 # pm-transcripts
 
-The Department of Prime Minister and Cabinet provides transcripts of more than 20,000 speeches, media releases, and interviews by Australian Prime Ministers. These transcripts can be searched online, and the underlying XML files can be downloaded using a simple API. This repository includes Jupyter notebooks for harvesting, indexing, analysing, and aggregating the transcripts.
+The Department of Prime Minister and Cabinet's [PM Transcripts site](https://pmtranscripts.pmc.gov.au) provides transcripts of more than 20,000 speeches, media releases, and interviews by Australian Prime Ministers. These transcripts can be searched online, and the underlying XML files can be downloaded using a simple API. This repository includes Jupyter notebooks for harvesting, indexing, analysing, and aggregating the transcripts.
 
-For more information and documentation see the [PM Transcripts - GLAM Workbench](https://glam-workbench.net/pm-transcripts/) section of the [GLAM Workbench](https://glam-workbench.net).
+For more information and documentation see the [PM Transcripts - GLAM Workbench](https://www.glam-workbench.net/pm-transcripts) section of the [GLAM Workbench](https://glam-workbench.net).
 
 ## Notebooks
 - [Aggregate transcripts by PM](https://github.com/GLAM-Workbench/pm-transcripts/blob/master/aggregate_transcripts.ipynb)
@@ -11,7 +11,7 @@ For more information and documentation see the [PM Transcripts - GLAM Workbench]
 
 
 ## Associated datasets
-- [GitHub - wragge/pm-transcripts-data · GitHub](https://github.com/wragge/pm-transcripts-data)
+- [GitHub - GLAM-Workbench/pm-transcripts-data · GitHub](https://github.com/wragge/pm-transcripts-data)
 
 
 <!-- START RUN INFO -->

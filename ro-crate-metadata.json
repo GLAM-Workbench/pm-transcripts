@@ -9,9 +9,8 @@
                     "@id": "https://orcid.org/0000-0001-7956-4498"
                 }
             ],
-            "codeRepository": "https://github.com/GLAM-Workbench/pm-transcripts/",
-            "datePublished": "2026-09-14T01:43:20+00:00",
-            "description": "",
+            "datePublished": "2026-09-14T02:05:22+00:00",
+            "description": "The Department of Prime Minister and Cabinet's [PM Transcripts site](https://pmtranscripts.pmc.gov.au) provides transcripts of more than 20,000 speeches, media releases, and interviews by Australian Prime Ministers. These transcripts can be searched online, and the underlying XML files can be downloaded using a simple API. This repository includes Jupyter notebooks for harvesting, indexing, analysing, and aggregating the transcripts.",
             "hasPart": [
                 {
                     "@id": "aggregate_transcripts.ipynb"
@@ -55,7 +54,8 @@
                     "@id": "#index_and_analyse_transcript_metadata_run_0"
                 }
             ],
-            "name": "pm-transcripts"
+            "name": "pm-transcripts",
+            "version": "v1.0.0"
         },
         {
             "@id": "ro-crate-metadata.json",
@@ -66,6 +66,27 @@
             "conformsTo": {
                 "@id": "https://w3id.org/ro/crate/1.2"
             }
+        },
+        {
+            "@id": "https://creativecommons.org/publicdomain/zero/1.0/",
+            "@type": "CreativeWork",
+            "name": "CC0 Public Domain Dedication",
+            "url": "https://creativecommons.org/publicdomain/zero/1.0/"
+        },
+        {
+            "@id": "https://www.glam-workbench.net/pm-transcripts",
+            "@type": "CreativeWork",
+            "name": "PM Transcripts - GLAM Workbench",
+            "url": "https://www.glam-workbench.net/pm-transcripts"
+        },
+        {
+            "@id": "create_version_v1_0_0",
+            "@type": "UpdateAction",
+            "actionStatus": {
+                "@id": "http://schema.org/CompletedActionStatus"
+            },
+            "endDate": "2026-09-14",
+            "name": "Create version v1.0.0"
         },
         {
             "@id": "https://www.python.org/downloads/release/python-31211/",
@@ -354,15 +375,9 @@
                 "@id": "https://www.glam-workbench.net/pm-transcripts/pm-transcripts-data/"
             },
             "name": "index.csv",
-            "sdDatePublished": "2026-09-14T01:43:28.047211+00:00",
+            "sdDatePublished": "2026-09-14T02:05:29.843600+00:00",
             "size": 28561,
             "url": "https://github.com/wragge/pm-transcripts-data/blob/master/index.csv"
-        },
-        {
-            "@id": "https://creativecommons.org/publicdomain/zero/1.0/",
-            "@type": "CreativeWork",
-            "name": "CC0 Public Domain Dedication",
-            "url": "https://creativecommons.org/publicdomain/zero/1.0/"
         },
         {
             "@id": "#index_and_analyse_transcript_metadata_run_0",
@@ -387,12 +402,6 @@
             "@type": "CreativeWork",
             "name": "Index and analyse transcript metadata - GLAM Workbench",
             "url": "https://www.glam-workbench.net/pm-transcripts/index_and_analyse_transcript_metadata/"
-        },
-        {
-            "@id": "https://www.glam-workbench.net/pm-transcripts",
-            "@type": "CreativeWork",
-            "name": "PM Transcripts - GLAM Workbench",
-            "url": "https://www.glam-workbench.net/pm-transcripts"
         }
     ]
 }
