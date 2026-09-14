@@ -9,7 +9,7 @@
                     "@id": "https://orcid.org/0000-0001-7956-4498"
                 }
             ],
-            "datePublished": "2026-09-14T03:44:17+00:00",
+            "datePublished": "2026-09-14T05:54:45+00:00",
             "description": "The Department of Prime Minister and Cabinet's [PM Transcripts site](https://pmtranscripts.pmc.gov.au) provides transcripts of more than 20,000 speeches, media releases, and interviews by Australian Prime Ministers. These transcripts can be searched online, and the underlying XML files can be downloaded using a simple API. This repository includes Jupyter notebooks for harvesting, indexing, analysing, and aggregating the transcripts.",
             "hasPart": [
                 {
@@ -54,8 +54,7 @@
                     "@id": "#index_and_analyse_transcript_metadata_run_0"
                 }
             ],
-            "name": "pm-transcripts",
-            "version": "v1.0.0"
+            "name": "pm-transcripts"
         },
         {
             "@id": "ro-crate-metadata.json",
@@ -119,6 +118,7 @@
                 "@id": "https://www.glam-workbench.net/pm-transcripts/aggregate_transcripts/"
             },
             "name": "Aggregate transcripts by PM",
+            "position": 3,
             "programmingLanguage": {
                 "@id": "https://www.python.org/downloads/release/python-31211/"
             },
@@ -278,6 +278,7 @@
                 "@id": "https://www.glam-workbench.net/pm-transcripts/harvest_transcripts/"
             },
             "name": "Harvest transcripts",
+            "position": 1,
             "programmingLanguage": {
                 "@id": "https://www.python.org/downloads/release/python-31211/"
             },
@@ -350,6 +351,7 @@
                 "@id": "https://www.glam-workbench.net/pm-transcripts/index_and_analyse_transcript_metadata/"
             },
             "name": "Create an index to the harvested files",
+            "position": 2,
             "programmingLanguage": {
                 "@id": "https://www.python.org/downloads/release/python-31211/"
             },
@@ -375,7 +377,7 @@
                 "@id": "https://www.glam-workbench.net/pm-transcripts/pm-transcripts-data/"
             },
             "name": "index.csv",
-            "sdDatePublished": "2026-09-14T03:44:25.676783+00:00",
+            "sdDatePublished": "2026-09-14T05:54:55.134019+00:00",
             "size": 28561,
             "url": "https://github.com/wragge/pm-transcripts-data/blob/main/index.csv"
         },
