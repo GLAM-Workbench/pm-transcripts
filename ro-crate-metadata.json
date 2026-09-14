@@ -9,8 +9,9 @@
                     "@id": "https://orcid.org/0000-0001-7956-4498"
                 }
             ],
-            "datePublished": "2026-09-13T07:36:05+00:00",
-            "description": "The Department of Prime Minister and Cabinet provides transcripts of more than 20,000 speeches, media releases, and interviews by Australian Prime Ministers. These transcripts can be searched online, and the underlying XML files can be downloaded using a simple API. This repository includes Jupyter notebooks for harvesting, indexing, analysing, and aggregating the transcripts.",
+            "codeRepository": "https://github.com/GLAM-Workbench/pm-transcripts/",
+            "datePublished": "2026-09-14T01:43:20+00:00",
+            "description": "",
             "hasPart": [
                 {
                     "@id": "aggregate_transcripts.ipynb"
@@ -41,7 +42,7 @@
                 "@id": "https://creativecommons.org/publicdomain/zero/1.0/"
             },
             "mainEntityOfPage": {
-                "@id": "https://glam-workbench.net/pm-transcripts/"
+                "@id": "https://www.glam-workbench.net/pm-transcripts"
             },
             "mentions": [
                 {
@@ -54,8 +55,7 @@
                     "@id": "#index_and_analyse_transcript_metadata_run_0"
                 }
             ],
-            "name": "pm-transcripts",
-            "version": "v1.0.0"
+            "name": "pm-transcripts"
         },
         {
             "@id": "ro-crate-metadata.json",
@@ -66,27 +66,6 @@
             "conformsTo": {
                 "@id": "https://w3id.org/ro/crate/1.2"
             }
-        },
-        {
-            "@id": "https://creativecommons.org/publicdomain/zero/1.0/",
-            "@type": "CreativeWork",
-            "name": "CC0 Public Domain Dedication",
-            "url": "https://creativecommons.org/publicdomain/zero/1.0/"
-        },
-        {
-            "@id": "https://glam-workbench.net/pm-transcripts/",
-            "@type": "CreativeWork",
-            "name": "PM Transcripts - GLAM Workbench",
-            "url": "https://glam-workbench.net/pm-transcripts/"
-        },
-        {
-            "@id": "create_version_v1_0_0",
-            "@type": "UpdateAction",
-            "actionStatus": {
-                "@id": "http://schema.org/CompletedActionStatus"
-            },
-            "endDate": "2026-09-13",
-            "name": "Create version v1.0.0"
         },
         {
             "@id": "https://www.python.org/downloads/release/python-31211/",
@@ -139,9 +118,18 @@
             "license": {
                 "@id": "https://creativecommons.org/licenses/by/4.0/"
             },
-            "name": "Plain text transcripts aggregated by Prime Minister",
+            "mainEntityOfPage": {
+                "@id": "https://www.glam-workbench.net/pm-transcripts/pm-transcripts-data/"
+            },
+            "name": "pms/combined",
             "size": 18,
             "url": "https://github.com/wragge/pm-transcripts-data/tree/master/pms/combined"
+        },
+        {
+            "@id": "https://github.com/wragge/pm-transcripts-data",
+            "@type": "CreativeWork",
+            "name": "GitHub - GLAM-Workbench/pm-transcripts-data · GitHub",
+            "url": "https://github.com/wragge/pm-transcripts-data"
         },
         {
             "@id": "https://creativecommons.org/licenses/by/4.0/",
@@ -150,10 +138,10 @@
             "url": "https://creativecommons.org/licenses/by/4.0/"
         },
         {
-            "@id": "https://github.com/wragge/pm-transcripts-data",
+            "@id": "https://www.glam-workbench.net/pm-transcripts/pm-transcripts-data/",
             "@type": "CreativeWork",
-            "name": "GitHub - wragge/pm-transcripts-data · GitHub",
-            "url": "https://github.com/wragge/pm-transcripts-data"
+            "name": "PM Transcripts data - GLAM Workbench",
+            "url": "https://www.glam-workbench.net/pm-transcripts/pm-transcripts-data/"
         },
         {
             "@id": "https://github.com/wragge/pm-transcripts-data/tree/master/pms/zips",
@@ -170,7 +158,10 @@
             "license": {
                 "@id": "https://creativecommons.org/licenses/by/4.0/"
             },
-            "name": "Zipped XML transcripts aggregated by Prime Minister",
+            "mainEntityOfPage": {
+                "@id": "https://www.glam-workbench.net/pm-transcripts/pm-transcripts-data/"
+            },
+            "name": "pms/zips",
             "size": 18,
             "url": "https://github.com/wragge/pm-transcripts-data/tree/master/pms/zips"
         },
@@ -189,7 +180,10 @@
             "license": {
                 "@id": "https://creativecommons.org/licenses/by/4.0/"
             },
-            "name": "Plain text transcripts of speeches aggregated by Prime Minister",
+            "mainEntityOfPage": {
+                "@id": "https://www.glam-workbench.net/pm-transcripts/pm-transcripts-data/"
+            },
+            "name": "pms/speech",
             "size": 18,
             "url": "https://github.com/wragge/pm-transcripts-data/tree/master/pms/speech"
         },
@@ -283,7 +277,10 @@
             "license": {
                 "@id": "https://creativecommons.org/licenses/by/4.0/"
             },
-            "name": "XML-formatted transcripts",
+            "mainEntityOfPage": {
+                "@id": "https://www.glam-workbench.net/pm-transcripts/pm-transcripts-data/"
+            },
+            "name": "transcripts",
             "size": 28560,
             "url": "https://github.com/wragge/pm-transcripts-data/tree/master/transcripts"
         },
@@ -296,6 +293,9 @@
             "endDate": "2026-09-12T02:40:14.366555+00:00",
             "instrument": {
                 "@id": "harvest_transcripts.ipynb"
+            },
+            "mainEntityOfPage": {
+                "@id": "https://www.glam-workbench.net/pm-transcripts/pm-transcripts-data/"
             },
             "name": "Run of notebook: harvest_transcripts.ipynb",
             "result": {
@@ -343,16 +343,26 @@
             "contentSize": 4907819,
             "dateModified": "2026-09-12T02:28:33.066151+00:00",
             "description": "A CSV file containing metadata extracted from the transcript XML files.",
+            "encodingFormat": "text/csv",
             "isPartOf": {
                 "@id": "https://github.com/wragge/pm-transcripts-data"
             },
             "license": {
                 "@id": "https://creativecommons.org/publicdomain/zero/1.0/"
             },
-            "name": "Index to XML transcripts",
-            "sdDatePublished": "2026-09-13T07:36:13.572267+00:00",
+            "mainEntityOfPage": {
+                "@id": "https://www.glam-workbench.net/pm-transcripts/pm-transcripts-data/"
+            },
+            "name": "index.csv",
+            "sdDatePublished": "2026-09-14T01:43:28.047211+00:00",
             "size": 28561,
             "url": "https://github.com/wragge/pm-transcripts-data/blob/master/index.csv"
+        },
+        {
+            "@id": "https://creativecommons.org/publicdomain/zero/1.0/",
+            "@type": "CreativeWork",
+            "name": "CC0 Public Domain Dedication",
+            "url": "https://creativecommons.org/publicdomain/zero/1.0/"
         },
         {
             "@id": "#index_and_analyse_transcript_metadata_run_0",
@@ -364,6 +374,9 @@
             "instrument": {
                 "@id": "index_and_analyse_transcript_metadata.ipynb"
             },
+            "mainEntityOfPage": {
+                "@id": "https://www.glam-workbench.net/pm-transcripts/pm-transcripts-data/"
+            },
             "name": "Run of notebook: index_and_analyse_transcript_metadata.ipynb",
             "result": {
                 "@id": "https://github.com/wragge/pm-transcripts-data/blob/master/index.csv"
@@ -374,6 +387,12 @@
             "@type": "CreativeWork",
             "name": "Index and analyse transcript metadata - GLAM Workbench",
             "url": "https://www.glam-workbench.net/pm-transcripts/index_and_analyse_transcript_metadata/"
+        },
+        {
+            "@id": "https://www.glam-workbench.net/pm-transcripts",
+            "@type": "CreativeWork",
+            "name": "PM Transcripts - GLAM Workbench",
+            "url": "https://www.glam-workbench.net/pm-transcripts"
         }
     ]
 }

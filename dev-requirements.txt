@@ -488,3 +488,6 @@ websocket-client==1.9.2
     # via
     #   -c requirements.txt
     #   jupyter-server
+
+# The following packages are considered to be unsafe in a requirements file:
+# setuptools

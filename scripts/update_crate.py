@@ -17,6 +17,7 @@ from github import Github
 import re
 import arrow
 import git
+import mimetypes
 
 LICENCES = json.loads(Path("scripts", "licences.json").read_text())
 CONTEXT_PROPERTIES = [
@@ -271,6 +272,10 @@ class CrateMaker:
             file_stats = local_file.stat()
             stats["contentSize"] = file_stats.st_size
             stats["dateModified"] = arrow.get(file_stats.st_mtime).isoformat()
+            # Guess the encoding type from extension
+            encoding = mimetypes.guess_type(local_path)[0]
+            if encoding:
+                stats["encodingFormat"] = encoding
             if local_file.name.endswith((".csv", ".ndjson")):
                 stats["size"] = 0
                 with local_file.open("r") as df:
@@ -390,6 +395,7 @@ class CrateMaker:
                             file_id = local_path
                         else:
                             fetch_remote = True
+                        self.set_gw_index_page(data_file, trim=False)
                     file_added = self.crate.add_file(
                         file_id, properties=props, fetch_remote=fetch_remote
                     )
@@ -484,12 +490,24 @@ class CrateMaker:
         nb = nbformat.read(notebook, nbformat.NO_CONVERT)
         return {k: v for k, v in nb.metadata.rocrate.items() if v}
 
+    def set_gw_index_page(self, metadata, trim=True):
+        """
+        Get the GLAM Workbench index page from a notebook or data file page,
+        removing the last path segment if its a notebook.
+        """
+        file_page = metadata.get("mainEntityOfPage")
+        if not file_page:
+            return
+        else:
+            if trim:
+                paths = file_page.strip("/").split("/")
+                index_page = "/".join(paths[:-1])
+            else:
+                index_page = file_page
+            self.index_page = index_page
+
     def add_notebook(self, notebook):
         gh_url = self.get_gh_file_url(notebook)
-        if self.data_repo:
-            nb_id = gh_url
-        else:
-            nb_id = notebook
         # Get metadata embedded in notebooks
         nb_metadata = self.get_nb_metadata(notebook)
         nb_metadata = self.add_repo_link(nb_metadata)
@@ -503,6 +521,11 @@ class CrateMaker:
             ),
             "url": gh_url,
         }
+        if self.data_repo:
+            nb_id = gh_url
+        else:
+            nb_id = notebook
+            self.set_gw_index_page(nb_metadata)
         # Add notebook to crate
         new_nb = self.crate.add_file(nb_id, properties=nb_props)
         # Add properties from notebook metadata
@@ -539,9 +562,9 @@ class CrateMaker:
     def prepare_data_crate(self):
         _, repo_name = self.get_gh_parts(self.data_repo)
         if repo_name:
-            crate_source = f"./{repo_name}-rocrate"
+            crate_source = f"{repo_name}-ro-crate-metadata.json"
         else:
-            crate_source = "./data-rocrate"
+            crate_source = "data-ro-crate-metadata.json"
         _, code_repo_url = self.get_repo_info()
         root_props, entities, versions = self.get_old_crate_data(crate_source)
         if not root_props:
@@ -550,6 +573,7 @@ class CrateMaker:
                 "description": self.defaults.get("description", ""),
                 "isBasedOn": self.defaults.get("isBasedOn", code_repo_url),
                 "distribution": f"{self.data_repo.rstrip('/')}/archive/refs/heads/main.zip",
+                "url": self.data_repo,
             }
             versions = []
             entities = {}
@@ -567,7 +591,7 @@ class CrateMaker:
                 "codeRepository": self.defaults.get("codeRepository", repo_url),
             }
             versions = []
-        return root_props, "./", entities, versions
+        return root_props, "ro-crate-metadata.json", entities, versions
 
     def update_crate(self):
         if self.data_repo:
@@ -599,10 +623,13 @@ class CrateMaker:
             for author in listify(nb.get("author")):
                 if author not in root.get("author", []):
                     root.append_to("author", author)
+        root["mainEntityOfPage"] = self.add_page(self.index_page)
         # Set licence of crate metadata
         root["license"] = self.add_context_entity(LICENCES["metadata"])
         # Save crate
-        self.crate.write(crate_source)
+        # print(self.crate)
+        # self.crate.write_detached("ro-crate-data.json")
+        self.crate.write_detached(crate_source)
 
 
 if __name__ == "__main__":
